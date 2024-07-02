@@ -2,8 +2,6 @@
 title: "The Sleeping Glow"
 ---
 
----
-
 Cette vision ne peut être véritable,\
 Qu’ai-je bien pu faire de mal\
 Pour mériter sous mes yeux telles images ?\
