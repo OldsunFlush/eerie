@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import BackToPrevious from "@components/BackToPrevious.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+
+const posts = await getCollection("collection");
+---
+
+<Layout title="Collection">
+  <Container>
+    <div class="space-y-10">
+      <BackToPrevious href="/">Retour à l'accueil</BackToPrevious>
+      <div class="space-y-4">
+        <ul class="not-prose flex flex-col gap-4">
+          {
+            posts.map((post) => (
+              <li class="animate">
+                <ArrowCard entry={post} />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </Container>
+</Layout>
