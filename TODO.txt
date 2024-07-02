@@ -1,4 +1,0 @@
-ajouter une favicon
-retirer les années des collection et posts
-mettre le nombre exact de posts
-résoudre la largeur du conteneur du header qui n'est pas identique entre les pages
