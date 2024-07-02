@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  overflow-y: auto;
+  overflow-y: scroll;
   color-scheme: light;
   scroll-padding-top: 100px;
 }
