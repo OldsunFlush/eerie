@@ -1,22 +1,17 @@
 import rss from "@astrojs/rss";
-import { SITE } from "@consts";
 import { getCollection } from "astro:content";
+import { SITE } from "@consts";
 
 export async function GET(context) {
-  const collection = (await getCollection("collection")).filter((post) => !post.data.draft);
-
-  const items = [...collection].sort(
-    (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
-  );
+  const collection = await getCollection("collection");
+  const items = [...collection];
 
   return rss({
-    title: SITE.TITLE,
-    description: SITE.DESCRIPTION,
+    title: SITE.title,
+    description: SITE.description,
     site: context.site,
     items: items.map((item) => ({
       title: item.data.title,
-      description: item.data.description,
-      pubDate: item.data.date,
       link: `/${item.collection}/${item.slug}/`,
     })),
   });

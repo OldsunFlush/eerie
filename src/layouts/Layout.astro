@@ -16,8 +16,8 @@ const { title } = Astro.props;
 <html lang="fr">
   <head>
     <Head
-      title={`${title} · ${SITE.TITLE}`}
-      description="Une collection de poèmes personnels, écrits à la fin des années 2000."
+      title={`${title} · ${SITE.title}`}
+      description={SITE.description}
     />
   </head>
   <body>
