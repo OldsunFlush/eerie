@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -34,7 +34,7 @@ const { title, description } = Astro.props;
   crossorigin
 />
 
-<ViewTransitions />
+<ClientRouter />
 
 <script is:inline>
   function init() {
